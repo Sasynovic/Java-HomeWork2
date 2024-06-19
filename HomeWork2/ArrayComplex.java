@@ -40,18 +40,19 @@ public class ArrayComplex {
     }
 
     // metodo di ricerca
-    public boolean search(Complex[] array, int DIM, Complex e, int pos) {
+    public boolean search(Complex[] array, int DIM, Complex e, int[] pos) {
 
-        boolean trovato=false;
+        boolean trovato= false;
         int i=0;
-        while(!trovato && i<DIM){
-            for(int j=0;j<DIM;j++){
-                if(array[i].moduloComplex() == e.moduloComplex()){
-                    pos = j;
-                    return trovato = true;
-                }
-                i++;
+        int count = 0;
+
+        while(i<DIM){
+            if(array[i].moduloComplex() == e.moduloComplex()){
+                pos[count] = i;
+                trovato = true;
+                count++;
             }
+            i++;
         }
         return trovato;
     }

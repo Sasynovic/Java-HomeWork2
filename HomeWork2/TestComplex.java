@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class TestComplex {
     public static void main(String[] args){
 
-        final int DIM = 3;
+        final int DIM = 6;
 
         ArrayComplex ac = new ArrayComplex();
         Complex[] array = new Complex[DIM];
@@ -26,9 +26,12 @@ public class TestComplex {
         input.close();
         Complex e = new Complex(reale, immaginaria);
 
-        int pos = 0;
+        int[] pos = new int[DIM];
         if(ac.search(array, DIM, e, pos)){
-            System.out.println("Elemento trovato in posizione: " + pos);
+            System.out.println("\nElemento trovato in posizione:");
+            for (int i : pos) {
+                    System.out.println(pos[i]);
+            }
         } else {
             System.out.println("Elemento non trovato.");
         }
