@@ -32,10 +32,10 @@ public class ArrayComplex {
     public void BubbleSort(Complex[] array, int DIM) {
         for (int i = 0; i < DIM; i++) {
             for (int j = 0; j < DIM - i - 1; j++) {
-                if (array[i].moduloComplex() > array[j].moduloComplex()) {
+                if (array[i].moduloComplex() > array[j+1].moduloComplex()) {
                     Complex temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
+                    array[i] = array[j+1];
+                    array[j+1] = temp;
                 }
             }
         }
