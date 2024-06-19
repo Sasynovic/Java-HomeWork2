@@ -1,4 +1,4 @@
-package package1;
+package HomeWork2;
 import java.lang.Math;
 
 public class Complex {
