@@ -5,7 +5,7 @@ public class ArrayComplex {
     public static void main(String[] args) {
     }
 
-    //inserisci numeri complessi da terminale utilizzando lo scanner
+    // inserisci i valori da tastiera
     public void InsertComplexFromTerminal(Complex[] array, int DIM) {
         Scanner input = new Scanner(System.in);
 
@@ -17,11 +17,9 @@ public class ArrayComplex {
 
             array[i] = new Complex(reale, immaginaria);
         }
-
-        input.close();
     }
 
-    //stampami tutti i valori presenti nell'array
+    // stampa tutti gli elementi
     public void PrintAll(Complex[] array, int DIM) {
         for (int i = 0; i < DIM; i++) {
             array[i].stampa();
@@ -30,11 +28,11 @@ public class ArrayComplex {
 
     //ordina per modulo gli elementi
     public void BubbleSort(Complex[] array, int DIM) {
-        for (int i = 0; i < DIM; i++) {
-            for (int j = 0; j < DIM - i - 1; j++) {
-                if (array[i].moduloComplex() > array[j+1].moduloComplex()) {
-                    Complex temp = array[i];
-                    array[i] = array[j+1];
+        for (int i = 0; i < DIM - 1; i++) {
+            for (int j = 0; j < DIM - i - 2; j++) {
+                if (array[j].moduloComplex() > array[j+1].moduloComplex()) {
+                    Complex temp = array[j];
+                    array[j] = array[j+1];
                     array[j+1] = temp;
                 }
             }

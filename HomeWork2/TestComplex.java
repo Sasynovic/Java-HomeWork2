@@ -1,24 +1,39 @@
 package HomeWork2;
+import java.util.Scanner;
 
 public class TestComplex {
     public static void main(String[] args){
-        Complex c1 = new Complex(1, 2);
-        Complex c2 = new Complex(3, 4);
-        Complex c3 = new Complex(c1);
-        c1.stampa();
-        c2.stampa();
-        c3.stampa();
-        System.out.println("Modulo c1: " + c1.moduloComplex());
-        System.out.println("Modulo c2: " + c2.moduloComplex());
-        System.out.println("Modulo c3: " + c3.moduloComplex());
-        Complex c4 = c1.sommaComplex(c2);
-        c4.stampa();
-        Complex c5 = c1.prodottoComplex(c2);
-        c5.stampa();
-        System.out.println("");
+
+        final int DIM = 3;
 
         ArrayComplex ac = new ArrayComplex();
-        ac.BubbleSort(new Complex[]{c1, c2, c3, c4, c5}, 5);
-        ac.PrintAll(new Complex[]{c1, c2, c3, c4, c5}, 5);
+        Complex[] array = new Complex[DIM];
+
+        System.out.println("Inserisci i valori da tastiera.");
+        ac.InsertComplexFromTerminal(array, DIM);
+        System.out.println("\nStampa tutti gli elementi.");
+        ac.PrintAll(array, DIM);
+        System.out.println("\nOrdina per modulo gli elementi.");
+        ac.BubbleSort(array, DIM);
+        System.out.println("\nStampa tutti gli elementi.");
+        ac.PrintAll(array, DIM);
+
+        System.out.print("\nRicerca di un elemento.\nInserisci la parte reale: ");
+        Scanner input = new Scanner(System.in);
+        double reale = input.nextDouble();
+        System.out.print("Inserisci la parte immaginaria: ");
+        double immaginaria = input.nextDouble();
+        input.close();
+        Complex e = new Complex(reale, immaginaria);
+
+        int pos = 0;
+        if(ac.search(array, DIM, e, pos)){
+            System.out.println("Elemento trovato in posizione: " + pos);
+        } else {
+            System.out.println("Elemento non trovato.");
+        }
+
+        input.close();
+
     }
 }

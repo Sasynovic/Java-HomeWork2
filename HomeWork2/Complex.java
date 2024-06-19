@@ -29,19 +29,16 @@ public class Complex {
         this.imm = imm;
     }
 
-    // metodo per stampare un reale
+    // metodi necessari
     public void stampa(){
         System.out.println("Re: " + this.re + " Imm: " + this.imm);
     }
-    // Metodo per calcolare il modulo di un numero complesso
     public double moduloComplex(){
         return Math.sqrt(re*re + imm*imm);
     }
-    // Metodo per sommare i valori di 2 numeri complessi
     public Complex sommaComplex(Complex c) {
         return new Complex(this.re + c.re, this.imm + c.imm);
     }
-    // Metodo per moltiplicare i valori di 2 numeri complessi
     public Complex prodottoComplex(Complex c) {
         return new Complex(this.re*c.re, this.imm*c.imm);
     }
