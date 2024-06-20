@@ -28,8 +28,8 @@ public class ArrayComplex {
 
     //ordina per modulo gli elementi
     public void BubbleSort(Complex[] array, int DIM) {
-        for (int i = 0; i < DIM - 1; i++) {
-            for (int j = 0; j < DIM - i - 1; j++) {
+        for (int i = 1; i < DIM; i++) {
+            for (int j = 0; j < DIM - i; j++) {
                 if (array[j].moduloComplex() > array[j + 1].moduloComplex()) {
                     Complex temp = array[j];
                     array[j] = array[j + 1];
@@ -42,7 +42,7 @@ public class ArrayComplex {
     // metodo di ricerca
     public boolean search(Complex[] array, int DIM, Complex e, int[] pos) {
 
-        boolean trovato= false;
+        /*boolean trovato= false;
         int i=0;
         int count = 0;
 
@@ -53,6 +53,20 @@ public class ArrayComplex {
                 count++;
             }
             i++;
+        }
+        return trovato;
+         */
+
+        boolean trovato = false;
+        pos[0]= -1;
+        int indice=0;
+        while(!trovato && indice<DIM){
+            if(array[indice].getRe()==e.getRe()&&array[indice].getImm()==e.getImm()){
+                trovato=true;
+                pos[0]=indice;
+            } else {
+                indice++;
+            }
         }
         return trovato;
     }

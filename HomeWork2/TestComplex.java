@@ -46,15 +46,12 @@ public class TestComplex {
                     System.out.print("Inserisci la parte immaginaria: ");
                     double immaginaria = input.nextDouble();
 
-                    int[] pos = new int[DIM];
+                    int[] pos = new int[1];
                     Complex e = new Complex(reale, immaginaria);
                     if(ac.search(array, DIM, e, pos)){
-                        System.out.println("\nElemento trovato in posizione:");
-                        for (int i : pos) {
-                                System.out.println(i);
-                        }
+                        System.out.println("Numero complesso in posizione "+pos[0]);
                     } else {
-                        System.out.println("Elemento non trovato.");
+                        System.out.println("numero complesso non trovato");
                     }
                     break;
                 case 5:
