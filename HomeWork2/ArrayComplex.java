@@ -70,6 +70,6 @@ public class ArrayComplex {
         System.out.println("3. Ordina per modulo gli elementi.");
         System.out.println("4. Ricerca di un elemento.");
         System.out.println("5. Stampa tutti i moduli.");
-        System.out.println("6. Esci.");
+        System.out.println("0. Esci.");
     }
 }

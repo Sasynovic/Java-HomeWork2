@@ -69,6 +69,9 @@ public class TestComplex {
                     break;
             }
         }while(x!=0);
+        System.out.println("************************************");
+        System.out.println("Fine programma.");
+        System.out.println("************************************");
         input.close();
     }
 }
