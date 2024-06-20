@@ -10,7 +10,7 @@ public class Alien extends Personaggio {
             alienCount++;
     }
 
-    public int get_AlienCount() {
+    public static int get_AlienCount() {
         return alienCount;
     }
 
@@ -27,9 +27,11 @@ public class Alien extends Personaggio {
         int newX = x+1;
         int newY = y+1;
 
-        if (((campo.isValidPosition(newX, newY) ) {
+        if (campo.isValidPosition(newX, newY) && !(campo.getGrid()[newX][newY] instanceof Alien)) {
             campo.removePersonaggio(x, y);
             campo.placePersonaggio(newX, newY, this);
+            this.setX(newX);
+            this.setY(newY);
         } else if (!this.vivo) {
             System.out.println("L'alieno è morto!");
         } else {

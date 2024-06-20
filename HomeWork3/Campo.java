@@ -12,22 +12,26 @@ public class Campo {
         return grid;
     }
 
+    public boolean isValidPosition(int x, int y) {
+        return (x >= 0 && x < grid.length && y >= 0 && y < grid.length);
+    }
+
     public void placePersonaggio(int x, int y, Personaggio personaggio) {
-        if(grid[x][y] == null)
-        {
-            this.grid[x][y] = personaggio;
+        if(grid[x][y]!=null) {
+            grid[x][y].die();
         }
+        this.grid[x][y] = personaggio;
     }
 
     public void removePersonaggio(int x, int y) {
         this.grid[x][y] = null;
     }
 
-    public boolean isValidPosition(int x, int y) {
-        return ((x >= 0 && x < this.grid.length) && (y >= 0 && y < this.grid.length));
+    public Personaggio whois(int x, int y) {
+        return grid[x][y];
     }
 
     public boolean gameover() {
-        return false;
+        return Alien.get_AlienCount() == 0 || Zombie.get_ZombieCount() == 0;
     }
 }
