@@ -5,6 +5,8 @@ public class Candidato {
     private String cognome;
     private int eta;
     private String curriculum;
+    Azienda candidatura;
+    Titolo competenze;
 
     public Candidato(String cognome, int eta, String curriculum) {
         this.cognome = cognome;
