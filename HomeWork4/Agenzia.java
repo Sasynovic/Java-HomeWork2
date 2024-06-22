@@ -13,7 +13,7 @@ public class Agenzia {
 
         System.out.print("\nInserisci il nome del file da leggere: ");
         String curriculum = "C:\\Users\\Barre\\IdeaProjects\\Java-OOP_Unina\\HomeWork4\\"+input.next();
-        System.out.println("\nCarico i dati del candidato dal file: " + curriculum + "...");
+        System.out.println("\nCarico i dati dal file: " + curriculum + "...");
         candidato1.LoadFromFile(curriculum);
     }
 }

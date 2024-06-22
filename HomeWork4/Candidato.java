@@ -43,7 +43,7 @@ public class Candidato implements Loadable {
             System.out.println("Eta: " + this.getEta());
             System.out.println("Curriculum: " + this.getCurriculum());
         }catch(Exception e){
-            System.out.println("Errore nella lettura del file");
+            System.out.println("Errore nella lettura del file.");
         }
     }
 
