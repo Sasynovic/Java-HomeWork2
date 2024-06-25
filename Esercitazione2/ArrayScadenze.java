@@ -16,9 +16,9 @@ public class ArrayScadenze {
 
     for(int i = 0; i < scaduto.length; i++) {
         if (scaduto[i].isScaduto()) {
-            System.out.println("L'elemento " + i + " è scaduto");
+            System.out.println("\nL'elemento " + i + " è scaduto.\nE' un " + scaduto[i].toString());
         } else {
-            System.out.println("L'elemento " + i + " non è scaduto");
+            System.out.println("\nL'elemento " + i + " non è scaduto.\nE' un " + scaduto[i].toString());
             }
         }
     }

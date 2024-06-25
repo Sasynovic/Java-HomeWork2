@@ -15,4 +15,9 @@ public class ProdottoAlimentare implements isScaduto {
         Data dataCorrente = new Data();
         return  dataCorrente.isAfter(dataScadenza);
     }
+
+    @Override
+    public String toString() {
+        return "Prodotto Alimentare: " + descrizione + " scade il " + dataScadenza;
+    }
 }

@@ -29,4 +29,9 @@ public class Data {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return giorno + "/" + mese + "/" + anno;
+    }
 }

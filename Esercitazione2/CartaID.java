@@ -15,4 +15,9 @@ public class CartaID implements isScaduto{
         Data dataCorrente = new Data();
         return  dataCorrente.isAfter(dataScadenza);
     }
+
+    @Override
+    public String toString() {
+        return "CartaID: " + nome + " scade il " + dataScadenza;
+    }
 }
