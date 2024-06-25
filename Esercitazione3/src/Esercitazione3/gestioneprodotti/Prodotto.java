@@ -13,4 +13,19 @@ public class Prodotto  {
         this.nomeProdotto = nomeProdotto;
         this.codice = codice;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        // TODO implement here
+    }
+    @Override
+    public String toString() {
+        // TODO implement here
+    }
+    public double calcolaCosto() {
+        // TODO implement here
+    }
+    public boolean checkCodice() {
+        // TODO implement here
+    }
 }

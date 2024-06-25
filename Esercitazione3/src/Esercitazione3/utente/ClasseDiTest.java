@@ -7,4 +7,8 @@ public class ClasseDiTest {
     public static void main(String[] args) {
         Magazzino magazzino = new Magazzino();
     }
+
+    public void CaricaDaFile() {
+        // TODO implement here
+    }
 }

@@ -20,4 +20,20 @@ public class Magazzino implements Searchable {
     public boolean searchForName(String name) {
         return false;
     }
+
+    public void InserisciSingoloProdotto(){
+        // TODO implement here
+    }
+    public void CancellaSingoloProdotto(){
+        // TODO implement here
+    }
+    public void StampaProdotti(){
+        // TODO implement here
+    }
+    public void SalvaSuFile(){
+        // TODO implement here
+    }
+    public void CaricaDaFile(){
+        // TODO implement here
+    }
 }

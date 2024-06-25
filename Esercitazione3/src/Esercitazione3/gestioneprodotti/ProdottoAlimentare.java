@@ -10,4 +10,16 @@ public class ProdottoAlimentare extends Prodotto{
         this.scontato = scontato;
         this.provenienza = provenienza;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        // TODO implement here
+    }
+    @Override
+    public String toString() {
+        // TODO implement here
+    }
+    public double calcolaCosto() {
+    // TODO implement here
+}
 }
