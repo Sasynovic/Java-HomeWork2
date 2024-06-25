@@ -9,11 +9,11 @@ public class Agenzia {
         System.out.println("Benvenuto nell'agenzia di collocamento!");
         System.out.println("************************************");
         Scanner input = new Scanner(System.in);
-        Candidato candidato1 = new Candidato();
+        Candidato candidato1 = new Candidato("Cancelliere", 24, "marcocanc.txt", 5);
 
-        System.out.print("\nInserisci il nome del file da leggere: ");
-        String curriculum = "C:\\Users\\Barre\\IdeaProjects\\Java-OOP_Unina\\HomeWork4\\"+input.next();
-        System.out.println("\nCarico i dati dal file: " + curriculum + "...");
+
+
+        System.out.println("\nCarico i dati dal file: " +  + "...");
         candidato1.LoadFromFile(curriculum);
     }
 }

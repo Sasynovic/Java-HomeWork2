@@ -1,31 +1,27 @@
 package HomeWork4;
 import java.util.Scanner;
-import java.io.FileReader;
+import java.io.Path;
 
 public class Candidato implements Loadable {
 
     private String cognome;
     private int eta;
     private String curriculum;
-    private Azienda candidatura;
+    private Azienda candidatura;  // Azienda che ha ricevuto la candidatura - come la uso??
     private Titolo[] competenze;
 
-    public Candidato() {
-        this.cognome = "";
-        this.eta = 0;
-        this.curriculum = "";
-    }
-    public Candidato(String cognome, int eta, String curriculum) {
+
+    public Candidato(String cognome, int eta, String curriculum,int titoli) {
         this.cognome = cognome;
         this.eta = eta;
         this.curriculum = curriculum;
+        this.competenze = new Titolo[titoli];
     }
 
     @Override
     public void LoadFromFile(String curriculum) throws Exception {
 
-        FileReader file = new FileReader(curriculum);
-        Scanner scanner = new Scanner(file);
+        Scanner scanner = new Scanner(;
 
         try{
             if(scanner.hasNextLine()) {
