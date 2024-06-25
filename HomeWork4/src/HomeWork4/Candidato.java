@@ -1,6 +1,5 @@
 package HomeWork4;
 import java.util.Scanner;
-import java.io.Path;
 
 public class Candidato implements Loadable {
 
@@ -11,17 +10,18 @@ public class Candidato implements Loadable {
     private Titolo[] competenze;
 
 
-    public Candidato(String cognome, int eta, String curriculum,int titoli) {
+    public Candidato(String cognome, int eta, String curriculum) {
         this.cognome = cognome;
         this.eta = eta;
         this.curriculum = curriculum;
+        int titoli = 1;
         this.competenze = new Titolo[titoli];
     }
 
     @Override
     public void LoadFromFile(String curriculum) throws Exception {
 
-        Scanner scanner = new Scanner(;
+        Scanner scanner = new Scanner(curriculum);
 
         try{
             if(scanner.hasNextLine()) {

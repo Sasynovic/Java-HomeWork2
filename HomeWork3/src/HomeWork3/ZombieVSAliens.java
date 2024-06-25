@@ -4,7 +4,7 @@ public class ZombieVSAliens {
     public static void main(String[] args) {
 
         // Creazione della board che deve essere di dimensione 5x5
-        Campo board = new Campo(5); // Campo di dimensione 5x5
+        Campo board = new Campo(5); // HomeWork3.Campo di dimensione 5x5
 
         // La partita consiste di 8 mosse
         Personaggio sequenza_mosse[] = new Personaggio[8];
@@ -28,10 +28,10 @@ public class ZombieVSAliens {
         // TEST0: limiti della board, in questa configurazione
         // iniziale nessuno può muoversi
         /*
-        Personaggio zombie1 = new Zombie(4, 2);
-        Personaggio zombie2 = new Zombie(4, 3);
-        Personaggio alien1 = new Alien(4, 0);
-        Personaggio alien2 = new Alien(4, 1);
+        HomeWork3.Personaggio zombie1 = new HomeWork3.Zombie(4, 2);
+        HomeWork3.Personaggio zombie2 = new HomeWork3.Zombie(4, 3);
+        HomeWork3.Personaggio alien1 = new HomeWork3.Alien(4, 0);
+        HomeWork3.Personaggio alien2 = new HomeWork3.Alien(4, 1);
 
         board.placePersonaggio(4, 2, zombie1);
         board.placePersonaggio(4, 3, zombie2);

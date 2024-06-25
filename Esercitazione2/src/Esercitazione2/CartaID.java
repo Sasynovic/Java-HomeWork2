@@ -18,6 +18,6 @@ public class CartaID implements isScaduto{
 
     @Override
     public String toString() {
-        return "CartaID: " + nome + " scade il " + dataScadenza;
+        return "Esercitazione2.CartaID: " + nome + " scade il " + dataScadenza;
     }
 }
