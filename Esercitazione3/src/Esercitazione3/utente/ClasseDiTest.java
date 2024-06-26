@@ -14,8 +14,8 @@ public class ClasseDiTest {
         System.out.print("Inserisci il nome del prodotto da cercare: ");
         String nome = input.next();
 
-        System.out.print(magazzino.searchForName(nome));
-        System.out.println(magazzino.getProdotto(1).calcolaCosto());
+        magazzino.searchForName(nome);
+        System.out.println("\n"+magazzino.getProdotto(1).calcolaCosto());
     }
 
     public void CaricaDaFile() {

@@ -31,6 +31,7 @@ public class Magazzino implements Searchable {
             i++;
 
         }
+        System.out.println("Prodotto non trovato");
         return false;
     }
 
