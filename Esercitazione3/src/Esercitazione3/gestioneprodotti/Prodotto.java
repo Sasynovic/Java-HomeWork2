@@ -14,6 +14,7 @@ public class Prodotto  {
         this.codice = codice;
     }
 
+    /*
     @Override
     public boolean equals(Object obj) {
         // TODO implement here
@@ -27,5 +28,10 @@ public class Prodotto  {
     }
     public boolean checkCodice() {
         // TODO implement here
+    }
+     */
+
+    public String getNomeProdotto() {
+        return this.nomeProdotto;
     }
 }

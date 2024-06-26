@@ -1,6 +1,6 @@
 package Esercitazione3.gestioneprodotti;
 
-public class ProdottoAlimentare extends Prodotto{
+public class ProdottoAlimentare extends Prodotto {
 
     private boolean scontato;
     private StringBuilder provenienza;
@@ -11,15 +11,17 @@ public class ProdottoAlimentare extends Prodotto{
         this.provenienza = provenienza;
     }
 
-    @Override
-    public boolean equals(Object obj) {
+
+/*    @Override
+    public boolean equals(Object obj){
         // TODO implement here
     }
     @Override
-    public String toString() {
+    public String toString(){
         // TODO implement here
     }
     public double calcolaCosto() {
-    // TODO implement here
-}
+        // TODO implement here
+    }
+    */
 }
