@@ -23,7 +23,7 @@ public class Magazzino implements Searchable {
         boolean trovato = false;
         int i = 0;
 
-        while(!trovato || i < magazzino.length) {
+        while(!trovato && i < magazzino.length) {
             if (magazzino[i] != null && magazzino[i].getNomeProdotto().equals(name)) {
                 System.out.println("Prodotto trovato in posizione: " + i);
                 return true;
@@ -67,5 +67,9 @@ public class Magazzino implements Searchable {
     }
     public void CaricaDaFile(){
         // TODO implement here
+    }
+
+    public Prodotto getProdotto(int index) {
+        return this.magazzino[index];
     }
 }

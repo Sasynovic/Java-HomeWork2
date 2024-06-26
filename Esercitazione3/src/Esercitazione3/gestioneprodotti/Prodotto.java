@@ -23,9 +23,12 @@ public class Prodotto  {
     public String toString() {
         // TODO implement here
     }
+    */
     public double calcolaCosto() {
-        // TODO implement here
+        double ris = this.costoBase * this.quantita;
+        return ris;
     }
+    /*
     public boolean checkCodice() {
         // TODO implement here
     }
