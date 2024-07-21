@@ -9,7 +9,7 @@ public class Automobile extends VeicoloAutonomo{
 
     @Override
     public String toString(){
-        return "circo";
+        return "\tAutomobile { " + super.toString() + "\tvelocitaCorrente:\t" + this.velocitaCorrente + " }";
     }
     @Override
     public boolean equals(Object obj){

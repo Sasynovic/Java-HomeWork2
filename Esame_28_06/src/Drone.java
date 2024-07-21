@@ -9,7 +9,7 @@ public class Drone extends VeicoloAutonomo{
 
     @Override
     public String toString(){
-        return "circo";
+        return "\tDrone { " + super.toString() + "\taltezzCorrente:\t" + this.altezzaCorrente + " }";
     }
     @Override
     public boolean equals(Object obj){

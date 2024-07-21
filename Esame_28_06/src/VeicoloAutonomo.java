@@ -1,4 +1,4 @@
-public abstract class VeicoloAutonomo implements Increasable{
+public abstract class VeicoloAutonomo implements Comparable<VeicoloAutonomo>,Increasable{
 
     private int carica;
     private int kMPercorsi;
@@ -10,9 +10,17 @@ public abstract class VeicoloAutonomo implements Increasable{
         this.id = Id;
     }
 
+    public int getKmPercorsi(){
+        return this.kMPercorsi;
+    }
+
+    @Override
+    public int compareTo(VeicoloAutonomo o) {
+        return this.carica - o.carica;
+    }
     @Override
     public String toString(){
-        return "circo";
+        return "ID: " + this.id + "\tCarica: " + this.carica + "\tkMPercorsi: " + this.kMPercorsi;
     }
     @Override
     public boolean equals(Object obj){
@@ -21,3 +29,5 @@ public abstract class VeicoloAutonomo implements Increasable{
 
     public abstract void increase(int value);
 }
+
+
