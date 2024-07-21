@@ -32,13 +32,17 @@ public class Lista {
         this.testa = q; // Aggiorna la testa per essere il nuovo nodo
     }
 
-    public void show() {
-        Nodo node = testa;
-        System.out.print("La lista è attualmente composta da:\n");
-        do {
-            System.out.println(node.data);
-            node = node.next;
-        }while (node != null);
+    public void append(VeicoloAutonomo elem){
+        if(isEmpity()){
+            push(elem);
+        }else{
+            Nodo head = testa;
+            Nodo q = new Nodo(elem);
+            while(head.next != null){
+                head = head.next;
+            }
+            head.next = q;
+        }
     }
 
     public void insert(VeicoloAutonomo elem){
@@ -59,6 +63,15 @@ public class Lista {
                 n.next = q; // quando il prossimo nodo è null assegno il nodo creato a n
             }
         }
+    }
+
+    public void show() {
+        Nodo node = testa;
+        System.out.print("La lista è attualmente composta da:\n");
+        do {
+            System.out.println(node.data);
+            node = node.next;
+        }while (node != null);
     }
 
     public void kmMediPerTipoVeicolo(){
@@ -96,4 +109,26 @@ public class Lista {
         }
     }
 
+    public void inserisciConOrdine(VeicoloAutonomo elem){
+
+        System.out.println("\nLista prima dell'inserimento con ordine:");
+        show();
+
+        Lista listaTemp = new Lista();
+        listaTemp.append(elem);
+
+        Nodo temp = testa;
+        while(temp != null){
+            if(temp.data.compareTo(elem) < 0){
+                listaTemp.append(temp.data);
+                temp = temp.next;
+        }else{
+                listaTemp.push(temp.data);
+                temp = temp.next;
+            }
+
+        System.out.println("\nLista dopo dell'inserimento con ordine:");
+        listaTemp.show();
+        }
     }
+}
