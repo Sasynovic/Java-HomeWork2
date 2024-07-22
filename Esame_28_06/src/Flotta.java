@@ -31,20 +31,17 @@ public class Flotta {
 
         lista.kmMediPerTipoVeicolo();
 
-        Drone veicolo = new Drone(71, 10, "dronek231", 54);
+        Drone veicolo = new Drone(101, 10, "dronek231", 54);
 
         lista.inserisciConOrdine(veicolo);
 
         System.out.print("\nProgramma Terminato.\n********************************\n");
-
-
-
     }
 
     public static void leggiDaFile(String nomeFile, Lista lista) {
 
         try{
-            Scanner input = new Scanner(Paths.get("C:\\Users\\Barre\\IdeaProjects\\Java-OOP_Unina\\Esame_28_06\\src\\Flotta.txt"));
+            Scanner input = new Scanner(Paths.get("C:\\Users\\Elly\\IdeaProjects\\Java-OOP_Unina1\\Esame_28_06\\src\\Flotta.txt"));
             int numelementi = input.nextInt();
             System.out.println("Carico i dati dal documento inserito...");
 

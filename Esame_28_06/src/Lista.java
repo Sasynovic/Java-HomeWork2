@@ -84,6 +84,9 @@ public class Lista {
         int sommaKmDrone = 0;
         int sommaKmAutomobile = 0;
 
+        float mediaKmDrone = 0;
+        float mediaKmAutomobile = 0;
+
         Nodo node = testa;
 
         while(node != null){
@@ -97,13 +100,16 @@ public class Lista {
             node = node.next; // Move to the next node only once per loop iteration
         }
 
+        mediaKmDrone = sommaKmDrone/countDrone;
+        mediaKmAutomobile = sommaKmAutomobile/countAutomobile;
+
         if(countDrone > 0){
-            System.out.println("Il numero di droni è: " + countDrone + " \n\tla media dei km percorsi è: " + (sommaKmDrone/countDrone));
+            System.out.println("Il numero di droni è: " + countDrone + " \n\tla media dei km percorsi è: " + mediaKmDrone);
         } else {
             System.out.println("Non ci sono droni nella lista");
         }
         if(countAutomobile > 0){
-            System.out.println("Il numero di automobili è: " + countAutomobile + "\n\te la media dei km percorsi è: " + (sommaKmAutomobile/countAutomobile));
+            System.out.println("Il numero di automobili è: " + countAutomobile + "\n\te la media dei km percorsi è: " + mediaKmAutomobile );
         } else {
             System.out.println("Non ci sono automobili nella lista");
         }
@@ -122,13 +128,12 @@ public class Lista {
             if(temp.data.compareTo(elem) < 0){
                 listaTemp.append(temp.data);
                 temp = temp.next;
-        }else{
+            }else{
                 listaTemp.push(temp.data);
                 temp = temp.next;
             }
-
+        }
         System.out.println("\nLista dopo dell'inserimento con ordine:");
         listaTemp.show();
-        }
     }
 }
