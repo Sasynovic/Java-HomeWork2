@@ -71,7 +71,7 @@ public class Lista {
     public void stampaDellaLista() {
         Nodo node = testa;
         while (node != null){
-            System.out.print(node.dato_tipo_int +",");
+            System.out.print(node.dato_tipo_int +"\t");
             node = node.next;
         }
     }
@@ -97,15 +97,5 @@ public class Lista {
             }
             n.next = node;
         }
-    }
-
-    /* come funziona il metodo di stampa :
-
-    per prima cosa creamo un nodo uguale alla testa
-    facciamo un ciclo while e fintato che non viene trovata la testa andiamo avanti stampando ogni risultato
-
-    */
-
-    public void BubbleSort(){
     }
 }

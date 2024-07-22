@@ -1,9 +1,9 @@
 public class main {
     public static void main(String[] args) {
 
-        int x = 7;
-        int y = 4;
-        int z = 12;
+        int x = 2;
+        int y = 3;
+        int z = 4;
 
         Lista linkedList = new Lista();
 
@@ -23,25 +23,38 @@ public class main {
             System.out.println("Non e' vuota");
         }
 
-        linkedList.append(55);
+        System.out.println("\nCon append aggiungo un elemento alla fine della lista\n");
+
+        linkedList.append(100);
         System.out.println("");
 
         linkedList.stampaDellaLista();
 
-        linkedList.push(50);
+        System.out.println("\nCon il metodo di inserimento aggiungo un elemento in base al critario compareTo\n");
+        linkedList.metodoInserimento(1000);
         System.out.println("");
 
         linkedList.stampaDellaLista();
 
+        System.out.println("\nCon push aggiungo un elemento in testa alla lista\n");
+        linkedList.push(10000);
+        System.out.println("");
+
+        linkedList.stampaDellaLista();
+
+        System.out.println("\ncon pop rimuovo l'elemento in testa alla lista\n");
         linkedList.pop();
         System.out.println("");
 
         linkedList.stampaDellaLista();
 
-        linkedList.rimuovi(4);
+        System.out.println("\ncon rimuovi rimuovo l'elemento che ha il valore passato come parametro\n");
+        linkedList.rimuovi(3);
         System.out.println("");
 
         linkedList.stampaDellaLista();
+
+
 
     }
 }
