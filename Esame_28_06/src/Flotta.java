@@ -41,7 +41,7 @@ public class Flotta {
     public static void leggiDaFile(String nomeFile, Lista lista) {
 
         try{
-            Scanner input = new Scanner(Paths.get("C:\\Users\\Elly\\IdeaProjects\\Java-OOP_Unina1\\Esame_28_06\\src\\Flotta.txt"));
+            Scanner input = new Scanner(Paths.get(nomeFile));
             int numelementi = input.nextInt();
             System.out.println("Carico i dati dal documento inserito...");
 
