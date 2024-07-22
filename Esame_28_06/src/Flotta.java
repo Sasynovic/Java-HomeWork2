@@ -33,7 +33,10 @@ public class Flotta {
 
         Drone veicolo = new Drone(101, 10, "dronek231", 54);
 
-        lista.inserisciConOrdine(veicolo);
+        lista = lista.inserisciConOrdine(veicolo);
+        System.out.println("");
+
+        lista.show();
 
         System.out.print("\nProgramma Terminato.\n********************************\n");
     }

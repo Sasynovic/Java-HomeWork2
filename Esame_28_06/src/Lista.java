@@ -115,7 +115,7 @@ public class Lista {
         }
     }
 
-    public void inserisciConOrdine(VeicoloAutonomo elem){
+    public Lista inserisciConOrdine(VeicoloAutonomo elem){
 
         System.out.println("\nLista prima dell'inserimento con ordine:");
         show();
@@ -134,6 +134,7 @@ public class Lista {
             }
         }
         System.out.println("\nLista dopo dell'inserimento con ordine:");
-        listaTemp.show();
+
+        return listaTemp;
     }
 }
